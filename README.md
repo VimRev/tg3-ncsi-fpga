@@ -4,13 +4,13 @@
 
 **One shared source tree - Captain 75T / 100T - Windows connectivity-probe experiments**
 
-> This is a private GitHub preview, not a public release. Licensing and third-party redistribution rights remain to be confirmed.
+> This is a public, source-only repository. Licensing and third-party redistribution rights remain under review; public visibility does not grant additional reuse or redistribution rights.
 > The design emulates local network responses and NCSI status. **It does not provide real Internet forwarding.**
 > All 66 protocol cases and seven module simulation suites passed. **The project owner has confirmed successful NCSI responses and a connected status in Windows.** This is owner-reported feedback from the tested environment, not a universal compatibility claim or evidence of real Internet forwarding.
 
 ## 1. Overview
 
-This Artix-7 network-interface experiment is based on the PCILeech FPGA framework. It includes a Broadcom TG3-style register model, transmit/receive descriptor handling, local DHCP/DNS/ARP/ICMP responses, and a limited implementation of the default Windows NCSI HTTP probes.
+This project emulates a TG3-style network adapter on FPGA hardware for Windows. It models device registers, DMA transmit and receive rings, interrupt handling, reset behavior, and power-state transitions. Local protocol responders provide DHCPv4 leases, gateway ARP, ICMP replies, and DNS answers for default Windows connectivity probes. A limited TCP and HTTP implementation answers modern and legacy NCSI requests, allowing Windows to report a connected status in the tested environment. The repository includes one shared source tree for Captain 75T and 100T targets. It is a controlled connectivity-emulation experiment, not a complete physical Ethernet adapter or a real Internet forwarding solution.
 
 Questions and project discussion: [join the Discord server](https://discord.gg/kzJuhn2BEv).
 
@@ -155,6 +155,6 @@ The publication copy includes portability adjustments to build comments and impo
 
 Existing copyright comments crediting PCILeech author Ulf Frisk are preserved. See [PCILeech FPGA](https://github.com/ufrisk/pcileech-fpga). Third-party components and generated HDL do not become original project code merely by inclusion in this repository.
 
-The selected source copy does not contain a clear license covering the entire repository, and some AMD/Xilinx HDL carries separate rights and licensing notices. This preview therefore does not assign an assumed MIT/GPL/Apache license. Applicable rights and terms must be confirmed before public release. See [LICENSE_STATUS.md](LICENSE_STATUS.md), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), and GitHub's [repository licensing documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Public visibility alone does not make a repository open-source licensed.
+The selected source copy does not contain a clear license covering the entire repository, and some AMD/Xilinx HDL carries separate rights and licensing notices. This repository does not assign an assumed MIT/GPL/Apache license. Confirm applicable rights and terms before reusing or redistributing third-party components. See [LICENSE_STATUS.md](LICENSE_STATUS.md), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), and GitHub's [repository licensing documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). Public visibility alone does not make a repository open-source licensed.
 
-The project owner reported that NCSI responses succeeded and Windows displayed a connected state. This README records that result only for the tested environment; it does not imply that both board targets, every Windows version, or every network environment passed. No screenshots, captures, or unspecified system versions have been fabricated. `VimRev/tg3-ncsi-fpga` remains a private preview with licensing pending.
+The project owner reported that NCSI responses succeeded and Windows displayed a connected state. This README records that result only for the tested environment; it does not imply that both board targets, every Windows version, or every network environment passed. No screenshots, captures, or unspecified system versions have been fabricated. `VimRev/tg3-ncsi-fpga` is publicly available as a source-only repository; applicable licensing remains under review.
