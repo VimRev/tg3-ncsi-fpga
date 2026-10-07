@@ -1,5 +1,7 @@
 # TG3 / DHCP / NCSI FPGA 网络接口仿真
 
+[![Join Discord](https://img.shields.io/badge/Discord-Join%20the%20server-5865F2?logo=discord&logoColor=white)](https://discord.gg/kzJuhn2BEv)
+
 **单份共享源码 · Captain 75T / 100T · Windows 联网状态探测实验**
 
 > 当前为 GitHub 私有预览，尚未公开；许可证及第三方再分发权限待确认。
@@ -9,6 +11,8 @@
 ## 1. 这是什么
 
 这是基于 PCILeech FPGA 框架的 Artix-7 网络接口实验源码，包含 Broadcom TG3 风格的寄存器模型、收发描述符处理、本地 DHCP/DNS/ARP/ICMP 应答，以及 Windows 默认 NCSI HTTP 探测的有限实现。
+
+项目交流与问题讨论：[加入 Discord 服务器](https://discord.gg/kzJuhn2BEv)。
 
 75T 和 100T 使用同一份核心 RTL，保留各自顶层、约束与工程生成脚本。仓库不打包两套已生成工程，使用者按需要在本地生成。
 
